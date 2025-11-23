@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact Us | Arab Cool Contracting & Services W.L.L</title>
+        <link rel="icon" href="./assets/favicon.png">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://unpkg.com/lenis@1.3.15/dist/lenis.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+    .hero-gradient {
+      background: linear-gradient(135deg,
+        #0f172a 0%,
+        #1e293b 20%,
+        #334155 40%,
+        #1e3a8a 60%,
+        #1e40af 80%,
+        #0f172a 100%);
+      background-size: 400% 400%;
+      animation: gradientSlide 15s ease infinite;
+    }
+    @keyframes gradientSlide {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .navbar-scrolled {
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    .mobile-menu.active {
+      max-height: 500px;
+    }
+
+    .section-divider {
+      height: 4px;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      width: 80px;
+      margin: 0 auto 2rem;
+      border-radius: 2px;
+    }
+
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+
+     /* Initially visible - GSAP will animate them dynamically */
+.gsap-fade-in,
+.gsap-slide-up,
+.gsap-scale {
+  opacity: 1;
+  transform: none;
+}
+  </style>
+    </head>
+    <body class="bg-gray-50 text-gray-800">
+
+        <!-- Top Bar -->
+        <div
+            class="bg-slate-900 text-white py-2.5 text-sm fixed top-0 left-0 right-0 z-50">
+            <div
+                class="max-w-7xl mx-auto px-4 md:px-6 flex flex-wrap justify-between items-center gap-3">
+                <div class="flex items-center gap-4 md:gap-6">
+                    <a href="tel:+97455449916"
+                        class="flex items-center gap-2 hover:text-cyan-400 transition">
+                        📞 <span class="inline sm:inline">+974 5544 9916</span>
+                    </a>
+                    <a href="mailto:arabcool25@gmail.com"
+                        class="hidden md:flex items-center gap-2 hover:text-cyan-400 transition">
+                        📧 arabcool25@gmail.com
+                    </a>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+                    <span class="text-xs md:text-sm">24/7 Emergency
+                        Service</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <div id="header"></div>
+        <!-- Hero -->
+        <!-- <section class="hero-gradient text-white py-24 md:py-32 mt-24 md:mt-28 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="gsap-slide-up text-3xl md:text-5xl lg:text-6xl font-extrabold mb-4 md:mb-6">
+        Contact Arab Cool
+      </h1>
+      <p class="gsap-slide-up text-base md:text-xl text-blue-100 max-w-2xl mx-auto">
+        We’re here to help with all your AC, electrical, and plumbing needs — 24 hours a day, 7 days a week.
+      </p>
+    </div>
+  </section> -->
+
+        <!-- Contact Form & Map -->
+   <section
+  class="hero-gradient relative overflow-hidden text-white py-16 mt-24 md:py-24">
+  
+  <!-- ✅ Background visuals -->
+  <div class="absolute inset-0 overflow-hidden">
+    <!-- Floating colorful blobs -->
+    <div
+      class="absolute top-10 md:top-20 right-10 md:right-20 w-48 md:w-72 h-48 md:h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float-animation"></div>
+    <div
+      class="absolute bottom-10 md:bottom-20 left-10 md:left-20 w-64 md:w-96 h-64 md:h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float-animation"
+      style="animation-delay: 2s;"></div>
+    <div
+      class="absolute top-1/2 left-1/2 w-56 md:w-80 h-56 md:h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float-animation"
+      style="animation-delay: 4s;"></div>
+
+    <!-- ✅ Blended background image -->
+    <div class="absolute inset-0 before:absolute before:inset-0 before:bg-slate-900/80">
+      <img
+        src="./assets/elec5.jpg"
+        alt="Arab Cool Contact Background"
+        class="w-full h-full object-cover opacity-40 mix-blend-overlay" />
+    </div>
+  </div>
+
+  <!-- ✅ Foreground content -->
+  <div
+    class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-10 md:gap-12 items-start">
+    
+    <!-- Contact Form -->
+    <div>
+      <h2
+        class="gsap-slide-up text-2xl md:text-4xl font-bold mb-3 md:mb-4">
+        Send Us a Message
+      </h2>
+      <p
+        class="gsap-slide-up text-sm md:text-base text-blue-100 mb-6 md:mb-8">
+        Share your requirements or issues and our support team will get back to you shortly.
+      </p>
+
+      <form action="./sendMail.php" method="POST"
+        class="space-y-4 md:space-y-5">
+        <div>
+          <label class="block text-sm md:text-base mb-1" for="name">Full Name</label>
+          <input id="name" name="name" type="text" required
+            class="w-full px-4 py-3 rounded-xl text-gray-900 outline-none border border-transparent focus:border-blue-400"
+            placeholder="Your Name">
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm md:text-base mb-1" for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" required
+              class="w-full px-4 py-3 rounded-xl text-gray-900 outline-none border border-transparent focus:border-blue-400"
+              placeholder="+974 ...">
+          </div>
+          <div>
+            <label class="block text-sm md:text-base mb-1" for="email">Email</label>
+            <input id="email" name="email" type="email" required
+              class="w-full px-4 py-3 rounded-xl text-gray-900 outline-none border border-transparent focus:border-blue-400"
+              placeholder="you@example.com">
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm md:text-base mb-1" for="subject">Subject</label>
+          <input id="subject" name="subject" type="text"
+            class="w-full px-4 py-3 rounded-xl text-gray-900 outline-none border border-transparent focus:border-blue-400"
+            placeholder="Service type or issue">
+        </div>
+        <div>
+          <label class="block text-sm md:text-base mb-1" for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required
+            class="w-full px-4 py-3 rounded-xl text-gray-900 outline-none border border-transparent focus:border-blue-400"
+            placeholder="Describe your requirement or problem"></textarea>
+        </div>
+        <button type="submit"
+          class="hover-scale w-full md:w-auto bg-white text-blue-900 px-8 md:px-10 py-3 md:py-3.5 rounded-xl font-semibold text-sm md:text-base shadow-2xl hover:bg-blue-50 transition">
+          Submit Request
+        </button>
+      </form>
+    </div>
+
+    <!-- Map / Info Box -->
+    <div
+      class="gsap-scale bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-4 md:p-6">
+      <h3
+        class="text-lg md:text-2xl font-bold mb-3 md:mb-4">Service Coverage</h3>
+      <p class="text-sm md:text-base text-blue-100 mb-4">
+        We serve all major areas across Doha and Qatar including West Bay, The Pearl,
+        Lusail City, Al Sadd, Al Rayyan, Al Wakrah, Al Khor, and Mesaieed.
+      </p>
+      <div
+        class="overflow-hidden rounded-xl h-64 md:h-80 bg-slate-800">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.060227445828!2d51.5310403!3d25.2854473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45c5c7049d1fdb%3A0x98d593ee0f12e51e!2sDoha%2C%20Qatar!5e0!3m2!1sen!2sqa!4v1700000000000"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        <!-- Contact Info -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 md:px-6">
+                <div class="text-center mb-12 md:mb-16">
+                    <span
+                        class="text-blue-600 font-semibold text-xs md:text-sm uppercase tracking-wider">Get
+                        in Touch</span>
+                    <h2
+                        class="gsap-slide-up text-2xl md:text-5xl font-bold text-slate-900 mt-2 md:mt-3 mb-3 md:mb-4">
+                        Contact Information
+                    </h2>
+                    <div class="section-divider"></div>
+                    <p
+                        class="gsap-slide-up text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
+                        Reach us through phone, email, or by submitting the form
+                        below. Our team will respond as soon as possible.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                    <div
+                        class="gsap-scale bg-blue-50 p-6 md:p-8 rounded-2xl shadow-md text-center">
+                        <span class="text-3xl md:text-4xl">📞</span>
+                        <h3
+                            class="font-bold text-lg md:text-xl mt-3 mb-2 text-slate-900">Phone</h3>
+                        <p class="text-gray-700 text-sm md:text-base">
+                            <a href="tel:+97455449916"
+                                class="hover:text-blue-600 transition block">+974
+                                5544 9916</a>
+                            <a href="tel:+97433494916"
+                                class="hover:text-blue-600 transition block mt-1">+974
+                                3349 4916</a>
+                        </p>
+                    </div>
+
+                    <div
+                        class="gsap-scale bg-cyan-50 p-6 md:p-8 rounded-2xl shadow-md text-center">
+                        <span class="text-3xl md:text-4xl">📧</span>
+                        <h3
+                            class="font-bold text-lg md:text-xl mt-3 mb-2 text-slate-900">Email</h3>
+                        <p class="text-gray-700 text-sm md:text-base break-all">
+                            <a href="mailto:arabcool25@gmail.com"
+                                class="hover:text-blue-600 transition">arabcool25@gmail.com</a>
+                        </p>
+                    </div>
+
+                    <div
+                        class="gsap-scale bg-indigo-50 p-6 md:p-8 rounded-2xl shadow-md text-center">
+                        <span class="text-3xl md:text-4xl">📍</span>
+                        <h3
+                            class="font-bold text-lg md:text-xl mt-3 mb-2 text-slate-900">Location</h3>
+                        <p class="text-gray-700 text-sm md:text-base">
+                            Doha, Qatar
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="footer"></div>
+
+        <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js"></script>
+
+        <script>
+
+                function load(){
+          async function loadHTML(id, file) {
+    const res = await fetch(file);
+    const html = await res.text();
+    document.getElementById(id).innerHTML = html;
+  }
+
+  loadHTML('header', './shared/header.html');
+  loadHTML('footer', './shared/footer.html');
+
+      }
+      load()
+
+
+  // Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+
+
+
+  document.addEventListener("DOMContentLoaded", function() {  
+    AOS.init({
+      duration: 800,   // Animation duration (ms)
+      easing: 'ease-out-cubic',
+      once: true,      // Animates only once per element
+      offset: 100      // Trigger offset from bottom of screen
+    });
+
+    // Mobile menu toggle
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobileMenu').classList.remove('active');
+      });
+    });
+  });
+
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('active');
+  }
+
+
+</script>
+
+    </body>
+</html>

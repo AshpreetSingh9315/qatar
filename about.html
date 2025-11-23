@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Arab Cool Contracting & Services W.L.L</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="./assets/favicon.png">
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.15/dist/lenis.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+    .navbar-scrolled { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
+    .hero-gradient {
+      background: linear-gradient(135deg, #0f172a, #1e3a8a, #0f172a);
+      background-size: 400% 400%;
+      animation: gradientSlide 15s ease infinite;
+    }
+    @keyframes gradientSlide {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .hover-lift { transition: all 0.4s ease; }
+    .hover-lift:hover { transform: translateY(-10px); box-shadow: 0 15px 25px -5px rgba(0,0,0,0.2); }
+    .hover-scale { transition: transform 0.3s ease; }
+    .hover-scale:hover { transform: scale(1.05); }
+    .glass-effect { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); }
+    .section-divider { height: 4px; background: linear-gradient(90deg, #3b82f6, #06b6d4); width: 80px; margin: 0 auto 2rem; border-radius: 2px; }
+  </style>
+     <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+    .hero-gradient {
+      background: linear-gradient(135deg,
+        #0f172a 0%,
+        #1e293b 20%,
+        #334155 40%,
+        #1e3a8a 60%,
+        #1e40af 80%,
+        #0f172a 100%);
+      background-size: 400% 400%;
+      animation: gradientSlide 15s ease infinite;
+    }
+    @keyframes gradientSlide {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hover-lift {
+      transition: all 0.3s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2);
+    }
+
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+
+    .navbar-scrolled {
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    .mobile-menu.active {
+      max-height: 500px;
+    }
+
+    .section-divider {
+      height: 4px;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      width: 80px;
+      margin: 0 auto 2rem;
+      border-radius: 2px;
+    }
+
+   /* Initially visible - GSAP will animate them dynamically */
+.gsap-fade-in,
+.gsap-slide-up,
+.gsap-scale {
+  opacity: 1;
+  transform: none;
+}
+
+  </style>
+  
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Top Bar -->
+   <div
+      class="bg-slate-900 text-white py-2.5 text-sm fixed top-0 left-0 right-0 z-50">
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-6 flex flex-wrap justify-between items-center gap-3">
+        <div class="flex items-center gap-4 md:gap-6">
+          <a href="tel:+97455449916"
+            class="flex items-center gap-2 hover:text-cyan-400 transition">
+            📞 <span class="inline sm:inline">+974 5544 9916</span>
+          </a>
+          <a href="mailto:arabcool25@gmail.com"
+            class="hidden md:flex items-center gap-2 hover:text-cyan-400 transition">
+            📧 arabcool25@gmail.com
+          </a>
+        </div>
+        <div class="flex items-center gap-2 pulse-animation">
+          <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+          <span class="text-xs md:text-sm">24/7 Emergency Service</span>
+        </div>
+      </div>
+    </div>
+
+  <!-- Navbar -->
+<div id="header"></div>
+
+
+  <!-- Hero Section -->
+<section
+  class="hero-gradient relative overflow-hidden flex items-center mt-24 md:mt-28">
+  
+  <!-- ✅ Background blended images (same as home page) -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div
+      class="absolute top-10 md:top-20 right-10 md:right-20 w-48 md:w-72 h-48 md:h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float-animation"></div>
+    <div
+      class="absolute bottom-10 md:bottom-20 left-10 md:left-20 w-64 md:w-96 h-64 md:h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float-animation"
+      style="animation-delay: 2s;"></div>
+    <div
+      class="absolute top-1/2 left-1/2 w-56 md:w-80 h-56 md:h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float-animation"
+      style="animation-delay: 4s;"></div>
+
+    <!-- Blended side images like home hero -->
+    <div class="absolute inset-0 flex">
+      <div
+        class="w-0 lg:w-1/2 md:w-1/2 sm:w-1/2 relative before:absolute before:inset-0 before:bg-gradient-to-r from-slate-900/80 to-transparent">
+        <img
+          src="./assets/elec1.jpg"
+          alt="Electrical service image"
+          class="w-full h-full object-cover opacity-40 mix-blend-overlay" />
+      </div>
+
+      <div
+        class="w-full lg:w-1/2 md:w-1/2 sm-full relative before:absolute before:inset-0 before:bg-gradient-to-l from-slate-900/80 to-transparent">
+        <img
+          src="./assets/plum1.jpg"
+          alt="Plumbing service image"
+          class="w-full h-full object-cover opacity-40 mix-blend-overlay" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Hero content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 py-16 md:py-24 w-full">
+    <div class="max-w-3xl">
+      <h1
+        class="gsap-slide-up text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 md:mb-6 leading-tight">
+        About Arab Cool Contracting & Services
+      </h1>
+      <p
+        class="gsap-fade-in text-base md:text-xl text-blue-100 mb-6 md:mb-8">
+        Building trust through innovation, expertise, and excellence —
+        serving Qatar’s HVAC and technical needs with pride and precision.
+      </p>
+      <div class="gsap-slide-up flex flex-wrap gap-3">
+        <a href="contact.html"
+          class="bg-white text-blue-900 hover:bg-blue-50 px-6 md:px-8 py-3 rounded-xl font-bold transition shadow-2xl text-sm md:text-base hover-scale">
+          Contact Us
+        </a>
+        <a href="services.html"
+          class="border border-white text-white hover:bg-white hover:text-blue-900 px-6 md:px-8 py-3 rounded-xl font-bold transition text-sm md:text-base hover-scale">
+          Explore Services
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Company Story -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        <h2 class="text-2xl md:text-5xl font-bold text-slate-900 gsap-slide-right">Our Story</h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mb-4"></div>
+        <p class="text-gray-700 text-base md:text-lg leading-relaxed gsap-slide-right">
+          Arab Cool Contracting & Services W.L.L is one of Qatar’s leading technical service providers specializing in HVAC, Electrical, and Plumbing solutions.
+        </p>
+        <p class="text-gray-700 text-base md:text-lg leading-relaxed gsap-slide-right">
+          Established in Doha, we’ve built a reputation for reliability, professionalism, and quality craftsmanship. Our certified team combines experience with cutting-edge technology to deliver exceptional solutions for both residential and commercial projects.
+        </p>
+        <p class="text-gray-700 text-base md:text-lg leading-relaxed gsap-slide-right">
+          Every project we undertake reflects our passion for excellence and our commitment to customer satisfaction — making Arab Cool a name synonymous with trust in Qatar.
+        </p>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-2xl gsap-scale">
+        <img src="./assets/elec2.jpg" alt="Arab Cool Team at Work" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+ <section
+  class="hero-gradient relative overflow-hidden text-white py-16 md:py-24">
+  
+  <!-- ✅ Background visuals -->
+  <div class="absolute inset-0 overflow-hidden">
+    <!-- Floating colorful blobs -->
+    <div
+      class="absolute top-10 md:top-20 right-10 md:right-20 w-48 md:w-72 h-48 md:h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float-animation"></div>
+    <div
+      class="absolute bottom-10 md:bottom-20 left-10 md:left-20 w-64 md:w-96 h-64 md:h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float-animation"
+      style="animation-delay: 2s;"></div>
+    <div
+      class="absolute top-1/2 left-1/2 w-56 md:w-80 h-56 md:h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float-animation"
+      style="animation-delay: 4s;"></div>
+
+    <!-- ✅ Blended background image -->
+    <div class="absolute inset-0 before:absolute before:inset-0 before:bg-slate-900/80">
+      <img
+        src="./assets/plum1.jpg"
+        alt="Arab Cool Mission and Vision background"
+        class="w-full h-full object-cover opacity-40 mix-blend-overlay" />
+    </div>
+  </div>
+
+  <!-- ✅ Foreground content -->
+  <div class="relative z-10 max-w-6xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-10">
+    
+    <!-- Mission -->
+    <div class="bg-white/10 backdrop-blur-lg p-6 md:p-10 rounded-2xl border border-white/20 gsap-slide-left">
+      <h3 class="text-2xl md:text-3xl font-bold text-cyan-400 mb-3">Our Mission</h3>
+      <p class="text-blue-100 text-base md:text-lg leading-relaxed">
+        “To deliver innovative, energy-efficient, and sustainable technical solutions that exceed client expectations while upholding the highest standards of quality, safety, and professionalism.”
+      </p>
+    </div>
+
+    <!-- Vision -->
+    <div class="bg-white/10 backdrop-blur-lg p-6 md:p-10 rounded-2xl border border-white/20 gsap-slide-right">
+      <h3 class="text-2xl md:text-3xl font-bold text-cyan-400 mb-3">Our Vision</h3>
+      <p class="text-blue-100 text-base md:text-lg leading-relaxed">
+        “To be Qatar’s most trusted name in HVAC and technical contracting — setting benchmarks for service excellence, innovation, and customer care.”
+      </p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Core Values -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 text-center">
+      <h2 class="text-2xl md:text-5xl font-bold text-slate-900 mb-3 md:mb-4 gsap-slide-up">Our Core Values</h2>
+      <div class="section-divider"></div>
+      <p class="text-gray-600 text-base md:text-xl mb-12 max-w-3xl mx-auto gsap-slide-up">
+        We’re guided by principles that define our success and the satisfaction of every client we serve.
+      </p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div class="hover-lift bg-gradient-to-br from-blue-50 to-white p-6 rounded-2xl border border-blue-100 shadow-md gsap-scale">
+          <h3 class="font-bold text-xl text-slate-900 mb-2">Integrity & Transparency</h3>
+          <p class="text-gray-600">We believe in honest, ethical practices — no hidden fees, no compromises.</p>
+        </div>
+        <div class="hover-lift bg-gradient-to-br from-cyan-50 to-white p-6 rounded-2xl border border-cyan-100 shadow-md gsap-scale">
+          <h3 class="font-bold text-xl text-slate-900 mb-2">Customer-Centric</h3>
+          <p class="text-gray-600">Your satisfaction is our priority — we listen, adapt, and deliver beyond expectations.</p>
+        </div>
+        <div class="hover-lift bg-gradient-to-br from-indigo-50 to-white p-6 rounded-2xl border border-indigo-100 shadow-md gsap-scale">
+          <h3 class="font-bold text-xl text-slate-900 mb-2">Safety & Reliability</h3>
+          <p class="text-gray-600">We maintain the highest safety standards, ensuring reliable performance always.</p>
+        </div>
+        <div class="hover-lift bg-gradient-to-br from-amber-50 to-white p-6 rounded-2xl border border-amber-100 shadow-md gsap-scale">
+          <h3 class="font-bold text-xl text-slate-900 mb-2">Innovation</h3>
+          <p class="text-gray-600">We embrace modern tools and eco-friendly technology to deliver smarter solutions.</p>
+        </div>
+        <div class="hover-lift bg-gradient-to-br from-teal-50 to-white p-6 rounded-2xl border border-teal-100 shadow-md gsap-scale">
+          <h3 class="font-bold text-xl text-slate-900 mb-2">Commitment to Quality</h3>
+          <p class="text-gray-600">Each project meets international quality benchmarks and client specifications.</p>
+        </div>
+        <div class="hover-lift bg-gradient-to-br from-violet-50 to-white p-6 rounded-2xl border border-violet-100 shadow-md gsap-scale">
+          <h3 class="font-bold text-xl text-slate-900 mb-2">Excellence</h3>
+          <p class="text-gray-600">We aim to exceed expectations with every installation, service, and repair.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+<div id="footer"></div>
+
+ <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js"></script>
+
+<script>
+  async function load() {
+    async function loadHTML(id, file) {
+      const res = await fetch(file);
+      const html = await res.text();
+      document.getElementById(id).innerHTML = html;
+    }
+
+    await loadHTML('header', './shared/header.html');
+    await loadHTML('footer', './shared/footer.html');
+
+    // ✅ Now header exists — safe to add toggle
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobileMenu').classList.remove('active');
+      });
+    });
+  }
+
+  load();
+
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('active');
+  }
+
+  AOS.init({
+    duration: 800,
+    easing: 'ease-out-cubic',
+    once: true,
+    offset: 100
+  });
+
+  const lenis = new Lenis({ autoRaf: true });
+</script>
+
+
+</body>
+</html>

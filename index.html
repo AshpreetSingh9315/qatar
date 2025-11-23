@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arab Cool Contracting & Services W.L.L | Premier HVAC Solutions in
+      Qatar</title>
+    <link rel="icon" href="./assets/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.15/dist/lenis.css">
+
+    <style>
+    body { 
+      font-family: 'Inter', sans-serif; 
+      overflow-x: hidden;
+    }
+    
+    html.lenis {
+      height: auto;
+    }
+    
+    .lenis.lenis-smooth {
+      scroll-behavior: auto;
+    }
+    
+    .lenis.lenis-smooth [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+    
+    .lenis.lenis-stopped {
+      overflow: hidden;
+    }
+    
+    .lenis.lenis-scrolling iframe {
+      pointer-events: none;
+    }
+    
+    /* Hero Carousel Animation */
+    @keyframes gradientSlide {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, 
+        #0f172a 0%,
+        #1e293b 20%,
+        #334155 40%,
+        #1e3a8a 60%,
+        #1e40af 80%,
+        #0f172a 100%);
+      background-size: 400% 400%;
+      animation: gradientSlide 15s ease infinite;
+    }
+    
+    /* Floating Animation */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-30px); }
+    }
+    
+    .float-animation {
+      animation: float 8s ease-in-out infinite;
+    }
+    
+    /* Hover Effects */
+    .hover-lift {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .hover-lift:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+    
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+    
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Gradient Text */
+    .gradient-text {
+      background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* Section Divider */
+    .section-divider {
+      height: 4px;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      width: 80px;
+      margin: 0 auto 2rem;
+      border-radius: 2px;
+    }
+    
+    /* Glass Effect */
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Pulse Animation */
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+    
+    .pulse-animation {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    
+    .mobile-menu.active {
+      max-height: 500px;
+    }
+
+    /* Hero Height - Fixed for mobile */
+    .hero-section {
+      height: 90vh;
+      min-height: 650px;
+      margin-top: 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        height: 100vh;
+        min-height: 600px;
+      }
+    }
+
+    /* Navbar height consideration */
+    .navbar-spacer {
+      height: 0;
+    }
+
+    /* Logo styling */
+    .company-logo {
+      object-fit: contain;
+      max-height: 100%;
+    }
+
+    /* Mobile optimizations */
+    @media (max-width: 640px) {
+      .hero-section h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+      }
+      
+      .hero-section p {
+        font-size: 1rem;
+      }
+    }
+
+    /* GSAP Animation Classes - Content visible by default */
+    .gsap-fade-in,
+.gsap-slide-up,
+.gsap-scale {
+  opacity: 1;
+  transform: none;
+}
+
+    
+    .gsap-slide-left {
+      opacity: 1;
+      transform: none;
+    }
+
+    .gsap-slide-right {
+      opacity: 1;
+      transform: none;
+    }
+
+     
+  </style>
+
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+
+    <!-- Top Bar -->
+    <div
+      class="bg-slate-900 text-white py-2.5 text-sm fixed top-0 left-0 right-0 z-50">
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-6 flex flex-wrap justify-between items-center gap-3">
+        <div class="flex items-center gap-4 md:gap-6">
+          <a href="tel:+97455449916"
+            class="flex items-center gap-2 hover:text-cyan-400 transition">
+            📞 <span class="inline sm:inline">+974 5544 9916</span>
+          </a>
+          <a href="mailto:arabcool25@gmail.com"
+            class="hidden md:flex items-center gap-2 hover:text-cyan-400 transition">
+            📧 arabcool25@gmail.com
+          </a>
+        </div>
+        <div class="flex items-center gap-2 pulse-animation">
+          <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+          <span class="text-xs md:text-sm">24/7 Emergency Service</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="header"></div>
+
+    <!-- Spacer for fixed navbar -->
+    <div style="height: 106px;"></div>
+
+    <!-- Hero Section with Animated Gradient -->
+    <section
+      id="home"
+      class="hero-section hero-gradient relative overflow-hidden flex items-center">
+      <!-- Decorative Elements -->
+      <div class="absolute inset-0 overflow-hidden">
+        <!-- Floating colorful blobs -->
+        <div
+          class="absolute top-10 md:top-20 right-10 md:right-20 w-48 md:w-72 h-48 md:h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float-animation"></div>
+        <div
+          class="absolute bottom-10 md:bottom-20 left-10 md:left-20 w-64 md:w-96 h-64 md:h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float-animation"
+          style="animation-delay: 2s;"></div>
+        <div
+          class="absolute top-1/2 left-1/2 w-56 md:w-80 h-56 md:h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float-animation"
+          style="animation-delay: 4s;"></div>
+
+        <!-- ✅ Background blended images -->
+        <div class="absolute inset-0 flex">
+          <!-- Left side image -->
+          <div
+            class="w-0 lg:w-1/2 md:w-1/2 sm:w-1/2 relative before:absolute before:inset-0 before:bg-gradient-to-r from-slate-900/80 to-transparent">
+            <img
+              src="./assets/elec1.jpg"
+              alt="Electrical service image"
+              class="w-full h-full object-cover opacity-40 mix-blend-overlay" />
+          </div>
+
+          <!-- Right side image -->
+          <div
+            class="w-full lg:w-1/2 md:w-1/2 sm-full relative before:absolute before:inset-0 before:bg-gradient-to-l from-slate-900/80 to-transparent">
+            <img
+              src="./assets/plum1.jpg"
+              alt="Plumbing service image"
+              class="w-full h-full object-cover opacity-40 mix-blend-overlay" />
+          </div>
+        </div>
+      </div>
+
+      <!-- ✅ Hero Content -->
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 py-2 md:py-10 w-full">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="gsap-fade-in mb-4 md:mb-6">
+            <span
+              class="glass-effect text-white px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-semibold inline-block">
+              ⭐ Qatar's Premier HVAC Service Provider
+            </span>
+          </div>
+
+          <h2
+            class="gsap-slide-up text-3xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4 md:mb-6 leading-tight px-2">
+            Excellence in Air Conditioning & Technical Services
+          </h2>
+
+          <p
+            class="gsap-slide-up text-base md:text-xl lg:text-2xl text-blue-100 mb-6 md:mb-8 max-w-3xl mx-auto px-4">
+            Professional Installation, Maintenance & Repair Solutions for
+            Residential and Commercial Properties Across Qatar
+          </p>
+
+          <div
+            class="gsap-slide-up flex flex-col sm:flex-row justify-center gap-3 md:gap-4 px-4">
+            <a
+              href="./contact.html"
+              class="bg-white text-blue-900 hover:bg-blue-50 px-6 md:px-8 py-3 md:py-4 rounded-xl font-bold transition shadow-2xl text-base md:text-lg hover-scale group">
+              <span class="flex items-center justify-center gap-2">
+                Get Free Consultation
+                <svg
+                  class="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </span>
+            </a>
+            <a
+              href="./services.html"
+              class="glass-effect text-white hover:bg-white hover:text-blue-900 border-2 border-white px-6 md:px-8 py-3 md:py-4 rounded-xl font-bold transition text-base md:text-lg hover-scale">
+              Explore Services
+            </a>
+          </div>
+
+          <!-- Stats in Hero -->
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mt-8 md:mt-16 px-2">
+            <div
+              class="gsap-scale glass-effect p-4 md:p-6 rounded-xl md:rounded-2xl text-center">
+              <div
+                class="text-2xl md:text-4xl font-bold text-white mb-1 md:mb-2">
+                1000+
+              </div>
+              <p class="text-blue-100 text-xs md:text-base">Projects</p>
+            </div>
+            <div
+              class="gsap-scale glass-effect p-4 md:p-6 rounded-xl md:rounded-2xl text-center">
+              <div
+                class="text-2xl md:text-4xl font-bold text-white mb-1 md:mb-2">
+                24/7
+              </div>
+              <p class="text-blue-100 text-xs md:text-base">Support</p>
+            </div>
+            <div
+              class="gsap-scale glass-effect p-4 md:p-6 rounded-xl md:rounded-2xl text-center">
+              <div
+                class="text-2xl md:text-4xl font-bold text-white mb-1 md:mb-2">
+                500+
+              </div>
+              <p class="text-blue-100 text-xs md:text-base">Clients</p>
+            </div>
+            <div
+              class="gsap-scale glass-effect p-4 md:p-6 rounded-xl md:rounded-2xl text-center">
+              <div
+                class="text-2xl md:text-4xl font-bold text-white mb-1 md:mb-2">
+                15+
+              </div>
+              <p class="text-blue-100 text-xs md:text-base">Years</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 md:px-6">
+        <div class="text-center mb-12 md:mb-16">
+          <span
+            class="text-blue-600 font-semibold text-xs md:text-sm uppercase tracking-wider">What
+            We Offer</span>
+          <h2
+            class="gsap-slide-up text-2xl md:text-5xl font-bold text-slate-900 mt-2 md:mt-3 mb-3 md:mb-4">Comprehensive
+            Technical Services</h2>
+          <div class="section-divider"></div>
+          <p
+            class="gsap-slide-up text-base md:text-xl text-gray-600 max-w-3xl mx-auto px-4">Professional
+            solutions tailored to meet all your residential and commercial
+            needs</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+
+          <!-- Service Card 1 -->
+          <div
+            class="gsap-slide-up bg-gradient-to-br from-blue-50 to-white hover-lift p-6 md:p-8 rounded-2xl border border-blue-100 shadow-lg group">
+            <div
+              class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center mb-4 md:mb-5 group-hover:scale-110 transition-transform">
+              <span class="text-2xl md:text-3xl">❄️</span>
+            </div>
+            <h3
+              class="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-4">AC
+              Installation</h3>
+            <ul class="text-sm md:text-base text-gray-700 space-y-2 mb-4">
+              <li class="flex items-start gap-2"><span
+                  class="text-blue-600 font-bold mt-1">✓</span><span>Split AC
+                  Systems</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-blue-600 font-bold mt-1">✓</span><span>Ducted AC
+                  Systems</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-blue-600 font-bold mt-1">✓</span><span>VRF & VRV
+                  Systems</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-blue-600 font-bold mt-1">✓</span><span>Package AC
+                  Units</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-blue-600 font-bold mt-1">✓</span><span>Chiller
+                  Systems</span></li>
+            </ul>
+            <p class="text-sm md:text-base text-gray-600">Expert installation
+              with energy-efficient design and manufacturer warranties.</p>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div
+            class="gsap-slide-up bg-gradient-to-br from-cyan-50 to-white hover-lift p-6 md:p-8 rounded-2xl border border-cyan-100 shadow-lg group">
+            <div
+              class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-cyan-600 to-blue-500 rounded-2xl flex items-center justify-center mb-4 md:mb-5 group-hover:scale-110 transition-transform">
+              <span class="text-2xl md:text-3xl">🔧</span>
+            </div>
+            <h3
+              class="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-4">Maintenance
+              & Repair</h3>
+            <ul class="text-sm md:text-base text-gray-700 space-y-2 mb-4">
+              <li class="flex items-start gap-2"><span
+                  class="text-cyan-600 font-bold mt-1">✓</span><span>Preventive
+                  Maintenance</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-cyan-600 font-bold mt-1">✓</span><span>Emergency
+                  Repairs</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-cyan-600 font-bold mt-1">✓</span><span>Gas
+                  Refilling & Leak Detection</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-cyan-600 font-bold mt-1">✓</span><span>Filter
+                  Cleaning</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-cyan-600 font-bold mt-1">✓</span><span>AMC
+                  Packages</span></li>
+            </ul>
+            <p class="text-sm md:text-base text-gray-600">24/7 rapid response
+              ensuring your systems run efficiently year-round.</p>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div
+            class="gsap-slide-up bg-gradient-to-br from-indigo-50 to-white hover-lift p-6 md:p-8 rounded-2xl border border-indigo-100 shadow-lg group">
+            <div
+              class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-indigo-600 to-purple-500 rounded-2xl flex items-center justify-center mb-4 md:mb-5 group-hover:scale-110 transition-transform">
+              <span class="text-2xl md:text-3xl">🌡️</span>
+            </div>
+            <h3
+              class="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-4">Ductwork
+              & Insulation</h3>
+            <ul class="text-sm md:text-base text-gray-700 space-y-2 mb-4">
+              <li class="flex items-start gap-2"><span
+                  class="text-indigo-600 font-bold mt-1">✓</span><span>GI
+                  Ducting Fabrication</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-indigo-600 font-bold mt-1">✓</span><span>Pre-Insulated
+                  Ducting</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-indigo-600 font-bold mt-1">✓</span><span>Duct
+                  Cleaning Services</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-indigo-600 font-bold mt-1">✓</span><span>Thermal
+                  Insulation</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-indigo-600 font-bold mt-1">✓</span><span>Pipe
+                  Cladding</span></li>
+            </ul>
+            <p class="text-sm md:text-base text-gray-600">Professional ductwork
+              improving airflow and reducing energy costs.</p>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div
+            class="gsap-slide-up bg-gradient-to-br from-amber-50 to-white hover-lift p-6 md:p-8 rounded-2xl border border-amber-100 shadow-lg group">
+            <div
+              class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-amber-600 to-yellow-500 rounded-2xl flex items-center justify-center mb-4 md:mb-5 group-hover:scale-110 transition-transform">
+              <span class="text-2xl md:text-3xl">⚡</span>
+            </div>
+            <h3
+              class="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-4">Electrical
+              Services</h3>
+            <ul class="text-sm md:text-base text-gray-700 space-y-2 mb-4">
+              <li class="flex items-start gap-2"><span
+                  class="text-amber-600 font-bold mt-1">✓</span><span>Complete
+                  Wiring</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-amber-600 font-bold mt-1">✓</span><span>Distribution
+                  Boards</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-amber-600 font-bold mt-1">✓</span><span>Lighting
+                  Systems</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-amber-600 font-bold mt-1">✓</span><span>Power
+                  Sockets</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-amber-600 font-bold mt-1">✓</span><span>Safety
+                  Inspections</span></li>
+            </ul>
+            <p class="text-sm md:text-base text-gray-600">Certified electricians
+              providing safe, code-compliant solutions.</p>
+          </div>
+
+          <!-- Service Card 5 -->
+          <div
+            class="gsap-slide-up bg-gradient-to-br from-teal-50 to-white hover-lift p-6 md:p-8 rounded-2xl border border-teal-100 shadow-lg group">
+            <div
+              class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-teal-600 to-cyan-500 rounded-2xl flex items-center justify-center mb-4 md:mb-5 group-hover:scale-110 transition-transform">
+              <span class="text-2xl md:text-3xl">💧</span>
+            </div>
+            <h3
+              class="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-4">Plumbing
+              Solutions</h3>
+            <ul class="text-sm md:text-base text-gray-700 space-y-2 mb-4">
+              <li class="flex items-start gap-2"><span
+                  class="text-teal-600 font-bold mt-1">✓</span><span>Water
+                  Heater Installation</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-teal-600 font-bold mt-1">✓</span><span>Leak
+                  Detection & Repair</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-teal-600 font-bold mt-1">✓</span><span>Drain
+                  Cleaning</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-teal-600 font-bold mt-1">✓</span><span>Bathroom &
+                  Kitchen Plumbing</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-teal-600 font-bold mt-1">✓</span><span>Water Tank
+                  Services</span></li>
+            </ul>
+            <p class="text-sm md:text-base text-gray-600">Comprehensive plumbing
+              ensuring reliable water systems.</p>
+          </div>
+
+          <!-- Service Card 6 -->
+          <div
+            class="gsap-slide-up bg-gradient-to-br from-violet-50 to-white hover-lift p-6 md:p-8 rounded-2xl border border-violet-100 shadow-lg group">
+            <div
+              class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-violet-600 to-purple-500 rounded-2xl flex items-center justify-center mb-4 md:mb-5 group-hover:scale-110 transition-transform">
+              <span class="text-2xl md:text-3xl">🏢</span>
+            </div>
+            <h3
+              class="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-4">Commercial
+              Projects</h3>
+            <ul class="text-sm md:text-base text-gray-700 space-y-2 mb-4">
+              <li class="flex items-start gap-2"><span
+                  class="text-violet-600 font-bold mt-1">✓</span><span>Office
+                  Building HVAC</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-violet-600 font-bold mt-1">✓</span><span>Retail
+                  Space Solutions</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-violet-600 font-bold mt-1">✓</span><span>Restaurant
+                  Ventilation</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-violet-600 font-bold mt-1">✓</span><span>Warehouse
+                  Climate Control</span></li>
+              <li class="flex items-start gap-2"><span
+                  class="text-violet-600 font-bold mt-1">✓</span><span>Hotel
+                  Systems</span></li>
+            </ul>
+            <p class="text-sm md:text-base text-gray-600">Large-scale
+              installations with project management support.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about"
+      class="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 md:px-6">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+
+          <div>
+            <span
+              class="gsap-fade-in text-cyan-400 font-semibold text-xs md:text-sm uppercase tracking-wider">Our
+              Story</span>
+            <h2
+              class="gsap-slide-right text-2xl md:text-5xl font-bold mt-2 md:mt-3 mb-4 md:mb-6">About
+              Arab Cool Contracting & Services</h2>
+            <div
+              class="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mb-6 md:mb-8"></div>
+
+            <p
+              class="gsap-slide-right text-base md:text-lg text-blue-100 mb-4 md:mb-6 leading-relaxed">
+              Arab Cool Contracting and Services W.L.L stands as one of Qatar's
+              most trusted technical service providers, specializing in
+              comprehensive HVAC, electrical, and plumbing solutions.
+            </p>
+
+            <p
+              class="gsap-slide-right text-base md:text-lg text-blue-100 mb-4 md:mb-6 leading-relaxed">
+              With headquarters in Doha, our team of highly skilled, certified
+              technicians brings years of expertise to every project. We pride
+              ourselves on using cutting-edge technology and premium materials
+              to deliver exceptional results.
+            </p>
+
+            <p
+              class="gsap-slide-right text-base md:text-lg text-blue-100 mb-6 md:mb-8 leading-relaxed">
+              From residential repairs to large-scale commercial installations,
+              we approach each project with professionalism and commitment to
+              excellence.
+            </p>
+
+            <div
+              class="gsap-scale bg-white/10 backdrop-blur-lg p-6 md:p-8 rounded-2xl border border-white/20 mb-6">
+              <h3
+                class="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-cyan-400">Our
+                Mission</h3>
+              <p
+                class="text-blue-100 italic text-base md:text-lg leading-relaxed">
+                "To be recognized as Qatar's most trusted and innovative technical service provider, setting the benchmark for quality, safety, and customer satisfaction."
+              </p>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+
+            <div
+              class="gsap-slide-left bg-gradient-to-br from-blue-600 to-cyan-500 p-6 md:p-8 rounded-2xl shadow-2xl">
+              <h3 class="text-xl md:text-3xl font-bold mb-4 md:mb-6">Our Core
+                Values</h3>
+              <div class="space-y-4 md:space-y-5">
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <span class="text-base md:text-lg">🎯</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg md:text-xl mb-1">Quality
+                      Assurance</h4>
+                    <p class="text-sm md:text-base text-blue-50">Premium tools
+                      and materials with manufacturer warranties</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <span class="text-base md:text-lg">🤝</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg md:text-xl mb-1">Integrity &
+                      Trust</h4>
+                    <p class="text-sm md:text-base text-blue-50">Transparent
+                      pricing and ethical business practices</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <span class="text-base md:text-lg">⚡</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg md:text-xl mb-1">Rapid
+                      Response</h4>
+                    <p class="text-sm md:text-base text-blue-50">24/7 emergency
+                      service team ready to assist</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <span class="text-base md:text-lg">🛡️</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg md:text-xl mb-1">Safety
+                      First</h4>
+                    <p class="text-sm md:text-base text-blue-50">Highest safety
+                      standards protecting people and property</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <span class="text-base md:text-lg">⭐</span>
+                  </div>
+                  <div>
+                    <h4
+                      class="font-bold text-lg md:text-xl mb-1">Excellence</h4>
+                    <p class="text-sm md:text-base text-blue-50">Superior
+                      workmanship in every project we undertake</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="gsap-slide-left bg-white p-6 md:p-8 rounded-2xl shadow-2xl">
+              <h3
+                class="text-xl md:text-2xl font-bold text-slate-900 mb-4 md:mb-6">Certifications</h3>
+              <ul class="space-y-3 text-sm md:text-base text-gray-700">
+                <li class="flex items-center gap-3">
+                  <span
+                    class="text-green-600 font-bold text-lg md:text-xl">✓</span>
+                  <span>Licensed & Registered in Qatar</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span
+                    class="text-green-600 font-bold text-lg md:text-xl">✓</span>
+                  <span>Certified HVAC Technicians</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span
+                    class="text-green-600 font-bold text-lg md:text-xl">✓</span>
+                  <span>Electrical Safety Certified</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span
+                    class="text-green-600 font-bold text-lg md:text-xl">✓</span>
+                  <span>ISO Quality Standards</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span
+                    class="text-green-600 font-bold text-lg md:text-xl">✓</span>
+                  <span>Insured & Bonded Services</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-choose" class="py-16 md:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 md:px-6">
+        <div class="text-center mb-12 md:mb-16">
+          <span
+            class="text-blue-600 font-semibold text-xs md:text-sm uppercase tracking-wider">Our
+            Advantages</span>
+          <h2
+            class="gsap-slide-up text-2xl md:text-5xl font-bold text-slate-900 mt-2 md:mt-3 mb-3 md:mb-4">Why
+            Choose Arab Cool</h2>
+          <div class="section-divider"></div>
+          <p
+            class="gsap-slide-up text-base md:text-xl text-gray-600 max-w-3xl mx-auto px-4">Experience
+            the difference of working with Qatar's most reliable service
+            provider</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+
+          <div
+            class="gsap-scale text-center p-6 md:p-8 bg-gradient-to-br from-blue-50 to-white rounded-2xl hover-lift border border-blue-100">
+            <div
+              class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-5 shadow-lg">
+              <span class="text-3xl md:text-4xl">👨‍🔧</span>
+            </div>
+            <h3
+              class="text-lg md:text-xl font-bold text-slate-900 mb-2 md:mb-3">Expert
+              Technicians</h3>
+            <p class="text-sm md:text-base text-gray-600">Certified
+              professionals with years of training and experience in HVAC
+              systems.</p>
+          </div>
+
+          <div
+            class="gsap-scale text-center p-6 md:p-8 bg-gradient-to-br from-cyan-50 to-white rounded-2xl hover-lift border border-cyan-100">
+            <div
+              class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-cyan-600 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-5 shadow-lg">
+              <span class="text-3xl md:text-4xl">🛠️</span>
+            </div>
+            <h3
+              class="text-lg md:text-xl font-bold text-slate-900 mb-2 md:mb-3">Premium
+              Equipment</h3>
+            <p class="text-sm md:text-base text-gray-600">State-of-the-art tools
+              and genuine parts from trusted manufacturers.</p>
+          </div>
+
+          <div
+            class="gsap-scale text-center p-6 md:p-8 bg-gradient-to-br from-indigo-50 to-white rounded-2xl hover-lift border border-indigo-100">
+            <div
+              class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-indigo-600 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-5 shadow-lg">
+              <span class="text-3xl md:text-4xl">🚨</span>
+            </div>
+            <h3
+              class="text-lg md:text-xl font-bold text-slate-900 mb-2 md:mb-3">24/7
+              Availability</h3>
+            <p class="text-sm md:text-base text-gray-600">Round-the-clock
+              emergency service ensures you're never without support.</p>
+          </div>
+
+          <div
+            class="gsap-scale text-center p-6 md:p-8 bg-gradient-to-br from-amber-50 to-white rounded-2xl hover-lift border border-amber-100">
+            <div
+              class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-amber-600 to-yellow-500 rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-5 shadow-lg">
+              <span class="text-3xl md:text-4xl">💰</span>
+            </div>
+            <h3
+              class="text-lg md:text-xl font-bold text-slate-900 mb-2 md:mb-3">Transparent
+              Pricing</h3>
+            <p class="text-sm md:text-base text-gray-600">Clear, competitive
+              quotes with no hidden fees or surprise charges.</p>
+          </div>
+
+          <div
+            class="gsap-scale text-center p-6 md:p-8 bg-gradient-to-br from-teal-50 to-white rounded-2xl hover-lift border border-teal-100">
+            <div
+              class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-teal-600 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-5 shadow-lg">
+              <span class="text-3xl md:text-4xl">📅</span>
+            </div>
+            <h3
+              class="text-lg md:text-xl font-bold text-slate-900 mb-2 md:mb-3">Maintenance
+              Plans</h3>
+            <p class="text-sm md:text-base text-gray-600">Customized AMC
+              packages preventing costly breakdowns and ensuring efficiency.</p>
+          </div>
+
+          <div
+            class="gsap-scale text-center p-6 md:p-8 bg-gradient-to-br from-violet-50 to-white rounded-2xl hover-lift border border-violet-100">
+            <div
+              class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-violet-600 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-5 shadow-lg">
+              <span class="text-3xl md:text-4xl">⭐</span>
+            </div>
+            <h3
+              class="text-lg md:text-xl font-bold text-slate-900 mb-2 md:mb-3">Proven
+              Excellence</h3>
+            <p class="text-sm md:text-base text-gray-600">Hundreds of satisfied
+              clients trust us with their critical systems.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 md:px-6">
+        <div class="text-center mb-12 md:mb-16">
+          <span
+            class="text-blue-600 font-semibold text-xs md:text-sm uppercase tracking-wider">Coverage</span>
+          <h2
+            class="gsap-slide-up text-2xl md:text-5xl font-bold text-slate-900 mt-2 md:mt-3 mb-3 md:mb-4">We
+            Serve All of Qatar</h2>
+          <div class="section-divider"></div>
+          <p
+            class="gsap-slide-up text-base md:text-xl text-gray-600 px-4">Professional
+            services across all major areas of Doha and beyond</p>
+        </div>
+
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+          <div
+            class="gsap-scale bg-white p-4 md:p-6 rounded-xl shadow-md hover-lift text-center border border-blue-100">
+            <h3 class="font-bold text-slate-900 text-sm md:text-lg">West
+              Bay</h3>
+          </div>
+          <div
+            class="gsap-scale bg-white p-4 md:p-6 rounded-xl shadow-md hover-lift text-center border border-blue-100">
+            <h3 class="font-bold text-slate-900 text-sm md:text-lg">The
+              Pearl</h3>
+          </div>
+          <div
+            class="gsap-scale bg-white p-4 md:p-6 rounded-xl shadow-md hover-lift text-center border border-blue-100">
+            <h3 class="font-bold text-slate-900 text-sm md:text-lg">Lusail
+              City</h3>
+          </div>
+          <div
+            class="gsap-scale bg-white p-4 md:p-6 rounded-xl shadow-md hover-lift text-center border border-blue-100">
+            <h3 class="font-bold text-slate-900 text-sm md:text-lg">Al Sadd</h3>
+          </div>
+          <div
+            class="gsap-scale bg-white p-4 md:p-6 rounded-xl shadow-md hover-lift text-center border border-blue-100">
+            <h3 class="font-bold text-slate-900 text-sm md:text-lg">Al
+              Rayyan</h3>
+          </div>
+          <div
+            class="gsap-scale bg-white p-4 md:p-6 rounded-xl shadow-md hover-lift text-center border border-blue-100">
+            <h3 class="font-bold text-slate-900 text-sm md:text-lg">Al
+              Wakrah</h3>
+          </div>
+          <div
+            class="gsap-scale bg-white p-4 md:p-6 rounded-xl shadow-md hover-lift text-center border border-blue-100">
+            <h3 class="font-bold text-slate-900 text-sm md:text-lg">Al Khor</h3>
+          </div>
+          <div
+            class="gsap-scale bg-white p-4 md:p-6 rounded-xl shadow-md hover-lift text-center border border-blue-100">
+            <h3
+              class="font-bold text-slate-900 text-sm md:text-lg">Mesaieed</h3>
+          </div>
+        </div>
+
+        <div
+          class="gsap-slide-up mt-8 md:mt-12 bg-gradient-to-r from-blue-600 to-cyan-500 text-white p-6 md:p-12 rounded-2xl text-center shadow-2xl">
+          <h3 class="text-xl md:text-3xl font-bold mb-2 md:mb-3">Nationwide
+            Coverage</h3>
+          <p class="text-base md:text-xl text-blue-50 max-w-3xl mx-auto">Our
+            mobile service teams are ready to assist you anywhere in Qatar with
+            prompt, professional support.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+  class="py-16 md:py-24 hero-gradient text-white relative overflow-hidden flex items-center justify-center">
+  
+  <!-- ✅ Background visuals -->
+  <div class="absolute inset-0 overflow-hidden">
+    <!-- Floating colorful blobs -->
+    <div
+      class="absolute top-10 md:top-20 right-10 md:right-20 w-48 md:w-72 h-48 md:h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float-animation"></div>
+    <div
+      class="absolute bottom-10 md:bottom-20 left-10 md:left-20 w-64 md:w-96 h-64 md:h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float-animation"
+      style="animation-delay: 2s;"></div>
+
+    <!-- ✅ Background blended image -->
+    <div class="absolute inset-0 before:absolute before:inset-0 before:bg-slate-900/80">
+      <img
+        src="./assets/elec5.jpg"
+        alt="Arab Cool HVAC service background"
+        class="w-full h-full object-cover opacity-40 mix-blend-overlay" />
+    </div>
+  </div>
+
+  <!-- ✅ CTA Content -->
+  <div class="relative z-10 max-w-5xl mx-auto px-4 md:px-6 text-center">
+    <h2
+      class="gsap-slide-up text-2xl md:text-5xl font-bold mb-4 md:mb-6">
+      Ready for Premium Service?
+    </h2>
+    <p
+      class="gsap-slide-up text-base md:text-2xl mb-8 md:mb-10 text-blue-100 max-w-3xl mx-auto">
+      Contact us today for a free consultation and discover why we're Qatar's
+      preferred choice.
+    </p>
+    <div class="gsap-scale flex flex-col sm:flex-row justify-center gap-4">
+      <a
+        href="tel:+97455449916"
+        class="bg-white text-blue-900 hover:bg-blue-50 px-8 md:px-10 py-3 md:py-4 rounded-xl font-bold transition shadow-2xl text-base md:text-lg hover-scale">
+        📞 Call Now
+      </a>
+      <a
+        href="mailto:arabcool25@gmail.com"
+        class="border-2 border-white hover:bg-white hover:text-blue-900 px-8 md:px-10 py-3 md:py-4 rounded-xl font-bold transition text-base md:text-lg hover-scale">
+        📧 Email Us
+      </a>
+    </div>
+  </div>
+</section>
+
+
+    <div id="footer"></div>
+
+    <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js"></script>
+
+    <script>
+
+      function load(){
+          async function loadHTML(id, file) {
+    const res = await fetch(file);
+    const html = await res.text();
+    document.getElementById(id).innerHTML = html;
+  }
+
+  loadHTML('header', './shared/header.html');
+  loadHTML('footer', './shared/footer.html');
+
+      }
+      load()
+
+  // Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+
+
+
+  document.addEventListener("DOMContentLoaded", function() {  
+    AOS.init({
+      duration: 800,   // Animation duration (ms)
+      easing: 'ease-out-cubic',
+      once: true,      // Animates only once per element
+      offset: 100      // Trigger offset from bottom of screen
+    });
+
+    // Mobile menu toggle
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobileMenu').classList.remove('active');
+      });
+    });
+  });
+
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('active');
+  }
+</script>
+
+  </body>
+</html>

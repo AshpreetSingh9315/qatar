@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Our Services | Arab Cool Contracting & Services W.L.L</title>
+        <link rel="icon" href="./assets/favicon.png">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://unpkg.com/lenis@1.3.15/dist/lenis.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <!-- GSAP -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+        <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+    .hero-gradient {
+      background: linear-gradient(135deg,
+        #0f172a 0%,
+        #1e293b 20%,
+        #334155 40%,
+        #1e3a8a 60%,
+        #1e40af 80%,
+        #0f172a 100%);
+      background-size: 400% 400%;
+      animation: gradientSlide 15s ease infinite;
+    }
+    @keyframes gradientSlide {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hover-lift {
+      transition: all 0.3s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2);
+    }
+
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+
+    .navbar-scrolled {
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    .mobile-menu.active {
+      max-height: 500px;
+    }
+
+    .section-divider {
+      height: 4px;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      width: 80px;
+      margin: 0 auto 2rem;
+      border-radius: 2px;
+    }
+
+   /* Initially visible - GSAP will animate them dynamically */
+.gsap-fade-in,
+.gsap-slide-up,
+.gsap-scale {
+  opacity: 1;
+  transform: none;
+}
+
+  </style>
+    </head>
+    <body class="bg-gray-50 text-gray-800">
+
+        <!-- Top Bar -->
+        <div
+      class="bg-slate-900 text-white py-2.5 text-sm fixed top-0 left-0 right-0 z-50">
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-6 flex flex-wrap justify-between items-center gap-3">
+        <div class="flex items-center gap-4 md:gap-6">
+          <a href="tel:+97455449916"
+            class="flex items-center gap-2 hover:text-cyan-400 transition">
+            📞 <span class="inline sm:inline">+974 5544 9916</span>
+          </a>
+          <a href="mailto:arabcool25@gmail.com"
+            class="hidden md:flex items-center gap-2 hover:text-cyan-400 transition">
+            📧 arabcool25@gmail.com
+          </a>
+        </div>
+        <div class="flex items-center gap-2 pulse-animation">
+          <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+          <span class="text-xs md:text-sm">24/7 Emergency Service</span>
+        </div>
+      </div>
+    </div>
+
+        <!-- Navbar -->
+    <div id="header"></div>
+
+
+        <!-- Hero -->
+       <section
+  class="hero-gradient relative overflow-hidden flex items-center mt-24 md:mt-28">
+  
+  <!-- ✅ Background blended images (same as home hero) -->
+  <div class="absolute inset-0 overflow-hidden">
+    <!-- Floating colorful blobs -->
+    <div
+      class="absolute top-10 md:top-20 right-10 md:right-20 w-48 md:w-72 h-48 md:h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float-animation"></div>
+    <div
+      class="absolute bottom-10 md:bottom-20 left-10 md:left-20 w-64 md:w-96 h-64 md:h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float-animation"
+      style="animation-delay: 2s;"></div>
+    <div
+      class="absolute top-1/2 left-1/2 w-56 md:w-80 h-56 md:h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float-animation"
+      style="animation-delay: 4s;"></div>
+
+    <!-- Background blended side images -->
+    <div class="absolute inset-0 flex">
+      <div
+        class="w-full lg:w-1/2 md:w-1/2 relative before:absolute before:inset-0 before:bg-gradient-to-r from-slate-900/80 to-transparent">
+        <img
+          src="./assets/elec1.jpg"
+          alt="Electrical service image"
+          class="w-full h-full object-cover opacity-40 mix-blend-overlay" />
+      </div>
+
+      <div
+        class=" w-0 lg:w-1/2 md:w-1/2 sm:w-1/2 sm-full relative before:absolute before:inset-0 before:bg-gradient-to-l from-slate-900/80 to-transparent">
+        <img
+          src="./assets/plum1.jpg"
+          alt="Plumbing service image"
+          class="w-full h-full object-cover opacity-40 mix-blend-overlay" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Hero content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 py-16 md:py-24 w-full">
+    <div class="max-w-3xl">
+      <h1
+        class="gsap-slide-up text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 md:mb-6 leading-tight">
+        Professional HVAC & Technical Services Across Qatar
+      </h1>
+      <p
+        class="gsap-fade-in text-base md:text-xl text-blue-100 mb-6 md:mb-8">
+        From AC installation to full MEP solutions, Arab Cool delivers reliable, high-quality
+        services for homes, offices, and commercial facilities.
+      </p>
+      <div class="gsap-slide-up flex flex-wrap gap-3">
+        <a href="contact.html"
+          class="bg-white text-blue-900 hover:bg-blue-50 px-6 md:px-8 py-3 rounded-xl font-bold transition shadow-2xl text-sm md:text-base hover-scale">
+          Get Free Consultation
+        </a>
+        <a href="#services-list"
+          class="border border-white text-white hover:bg-white hover:text-blue-900 px-6 md:px-8 py-3 rounded-xl font-bold transition text-sm md:text-base hover-scale">
+          View All Services
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        <!-- Services Grid (same data as homepage, expanded) -->
+        <section id="services-list" class="py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 md:px-6">
+                <div class="text-center mb-12 md:mb-16">
+                    <span
+                        class="text-blue-600 font-semibold text-xs md:text-sm uppercase tracking-wider">What
+                        We Do</span>
+                    <h2
+                        class="gsap-slide-up text-2xl md:text-5xl font-bold text-slate-900 mt-2 md:mt-3 mb-3 md:mb-4">
+                        Comprehensive Technical Services
+                    </h2>
+                    <div class="section-divider"></div>
+                    <p
+                        class="gsap-slide-up text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
+                        All your HVAC, electrical, and plumbing needs handled by
+                        one trusted partner.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    <!-- AC Installation -->
+                    <div
+                        class="gsap-scale bg-gradient-to-br from-blue-50 to-white hover-lift p-6 md:p-8 rounded-2xl border border-blue-100 shadow-lg">
+                        <div
+                            class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center mb-4 md:mb-5">
+                            <span class="text-2xl md:text-3xl">❄️</span>
+                        </div>
+                        <h3
+                            class="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-4">AC
+                            Installation</h3>
+                        <ul
+                            class="text-sm md:text-base text-gray-700 space-y-2 mb-4">
+                            <li>Split AC Systems</li>
+                            <li>Ducted AC Systems</li>
+                            <li>VRF &amp; VRV Systems</li>
+                            <li>Package AC Units</li>
+                            <li>Chiller Systems</li>
+                        </ul>
+                        <p class="text-sm md:text-base text-gray-600">
+                            Energy-efficient designs, manufacturer-compliant
+                            installation, and optimal cooling performance.
+                        </p>
+                    </div>
+
+                    <!-- Maintenance & Repair -->
+                    <div
+                        class="gsap-scale bg-gradient-to-br from-cyan-50 to-white hover-lift p-6 md:p-8 rounded-2xl border border-cyan-100 shadow-lg">
+                        <div
+                            class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-cyan-600 to-blue-500 rounded-2xl flex items-center justify-center mb-4 md:mb-5">
+                            <span class="text-2xl md:text-3xl">🔧</span>
+                        </div>
+                        <h3
+                            class="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-4">Maintenance
+                            &amp; Repair</h3>
+                        <ul
+                            class="text-sm md:text-base text-gray-700 space-y-2 mb-4">
+                            <li>Preventive Maintenance</li>
+                            <li>Emergency Repairs</li>
+                            <li>Gas Refilling &amp; Leak Detection</li>
+                            <li>Filter Cleaning</li>
+                            <li>AMC Packages</li>
+                        </ul>
+                        <p class="text-sm md:text-base text-gray-600">
+                            24/7 service teams keep your systems running
+                            reliably and efficiently.
+                        </p>
+                    </div>
+
+                    <!-- Ductwork & Insulation -->
+                    <div
+                        class="gsap-scale bg-gradient-to-br from-indigo-50 to-white hover-lift p-6 md:p-8 rounded-2xl border border-indigo-100 shadow-lg">
+                        <div
+                            class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-indigo-600 to-purple-500 rounded-2xl flex items-center justify-center mb-4 md:mb-5">
+                            <span class="text-2xl md:text-3xl">🌡️</span>
+                        </div>
+                        <h3
+                            class="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-4">Ductwork
+                            &amp; Insulation</h3>
+                        <ul
+                            class="text-sm md:text-base text-gray-700 space-y-2 mb-4">
+                            <li>GI Ducting Fabrication</li>
+                            <li>Pre-Insulated Ducting</li>
+                            <li>Duct Cleaning</li>
+                            <li>Thermal Insulation</li>
+                            <li>Pipe Cladding</li>
+                        </ul>
+                        <p class="text-sm md:text-base text-gray-600">
+                            Improved airflow, reduced losses, and better indoor
+                            comfort.
+                        </p>
+                    </div>
+
+                    <!-- Electrical Services -->
+                    <div
+                        class="gsap-scale bg-gradient-to-br from-amber-50 to-white hover-lift p-6 md:p-8 rounded-2xl border border-amber-100 shadow-lg">
+                        <div
+                            class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-amber-600 to-yellow-500 rounded-2xl flex items-center justify-center mb-4 md:mb-5">
+                            <span class="text-2xl md:text-3xl">⚡</span>
+                        </div>
+                        <h3
+                            class="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-4">Electrical
+                            Services</h3>
+                        <ul
+                            class="text-sm md:text-base text-gray-700 space-y-2 mb-4">
+                            <li>Complete Wiring &amp; Rewiring</li>
+                            <li>Distribution Boards</li>
+                            <li>Lighting Systems</li>
+                            <li>Power Sockets &amp; Outlets</li>
+                            <li>Safety Inspections</li>
+                        </ul>
+                        <p class="text-sm md:text-base text-gray-600">
+                            Certified, code-compliant electrical work for safe
+                            operations.
+                        </p>
+                    </div>
+
+                    <!-- Plumbing Solutions -->
+                    <div
+                        class="gsap-scale bg-gradient-to-br from-teal-50 to-white hover-lift p-6 md:p-8 rounded-2xl border border-teal-100 shadow-lg">
+                        <div
+                            class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-teal-600 to-cyan-500 rounded-2xl flex items-center justify-center mb-4 md:mb-5">
+                            <span class="text-2xl md:text-3xl">💧</span>
+                        </div>
+                        <h3
+                            class="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-4">Plumbing
+                            Solutions</h3>
+                        <ul
+                            class="text-sm md:text-base text-gray-700 space-y-2 mb-4">
+                            <li>Water Heater Installation</li>
+                            <li>Leak Detection &amp; Repair</li>
+                            <li>Drain Cleaning</li>
+                            <li>Bathroom &amp; Kitchen Plumbing</li>
+                            <li>Water Tank Services</li>
+                        </ul>
+                        <p class="text-sm md:text-base text-gray-600">
+                            Reliable water systems and fast resolution for any
+                            plumbing issues.
+                        </p>
+                    </div>
+
+                    <!-- Commercial Projects -->
+                    <div
+                        class="gsap-scale bg-gradient-to-br from-violet-50 to-white hover-lift p-6 md:p-8 rounded-2xl border border-violet-100 shadow-lg">
+                        <div
+                            class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-violet-600 to-purple-500 rounded-2xl flex items-center justify-center mb-4 md:mb-5">
+                            <span class="text-2xl md:text-3xl">🏢</span>
+                        </div>
+                        <h3
+                            class="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-4">Commercial
+                            Projects</h3>
+                        <ul
+                            class="text-sm md:text-base text-gray-700 space-y-2 mb-4">
+                            <li>Office Building HVAC</li>
+                            <li>Retail &amp; Showrooms</li>
+                            <li>Restaurant Ventilation</li>
+                            <li>Warehouse Climate Control</li>
+                            <li>Hotel Systems</li>
+                        </ul>
+                        <p class="text-sm md:text-base text-gray-600">
+                            Full-scale MEP solutions with project management
+                            support.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+      <section
+  class="hero-gradient relative overflow-hidden text-white text-center flex items-center justify-center py-16 md:py-24">
+  
+  <!-- ✅ Background visuals -->
+  <div class="absolute inset-0 overflow-hidden">
+    <!-- Floating colorful blobs -->
+    <div
+      class="absolute top-10 md:top-20 right-10 md:right-20 w-48 md:w-72 h-48 md:h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float-animation"></div>
+    <div
+      class="absolute bottom-10 md:bottom-20 left-10 md:left-20 w-64 md:w-96 h-64 md:h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float-animation"
+      style="animation-delay: 2s;"></div>
+    <div
+      class="absolute top-1/2 left-1/2 w-56 md:w-80 h-56 md:h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float-animation"
+      style="animation-delay: 4s;"></div>
+
+    <!-- ✅ Blended background image -->
+    <div class="absolute inset-0 before:absolute before:inset-0 before:bg-slate-900/80">
+      <img
+        src="./assets/elec5.jpg"
+        alt="Arab Cool Technical Services"
+        class="w-full h-full object-cover opacity-40 mix-blend-overlay" />
+    </div>
+  </div>
+
+  <!-- ✅ Foreground content -->
+  <div class="relative z-10 max-w-4xl mx-auto px-4">
+    <h2
+      class="gsap-slide-up text-2xl md:text-5xl font-bold mb-4 md:mb-6">
+      Need a Custom Solution?
+    </h2>
+    <p
+      class="gsap-slide-up text-base md:text-xl text-blue-100 mb-8 md:mb-10">
+      Share your project requirements and our team will recommend the best combination
+      of services for your property.
+    </p>
+    <a
+      href="contact.html"
+      class="bg-white text-blue-900 hover:bg-blue-50 px-8 md:px-10 py-3 md:py-4 rounded-xl font-bold transition shadow-2xl text-base md:text-lg hover-scale">
+      📞 Contact Our Experts
+    </a>
+  </div>
+</section>
+
+
+        <!-- Footer -->
+        <div id="footer"></div>
+
+
+        <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js"></script>
+
+        <script>
+
+
+    function load(){
+          async function loadHTML(id, file) {
+    const res = await fetch(file);
+    const html = await res.text();
+    document.getElementById(id).innerHTML = html;
+  }
+
+  loadHTML('header', './shared/header.html');
+  loadHTML('footer', './shared/footer.html');
+
+      }
+      load()
+
+
+  // Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+
+
+
+  document.addEventListener("DOMContentLoaded", function() {  
+    AOS.init({
+      duration: 800,   // Animation duration (ms)
+      easing: 'ease-out-cubic',
+      once: true,      // Animates only once per element
+      offset: 100      // Trigger offset from bottom of screen
+    });
+
+    // Mobile menu toggle
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobileMenu').classList.remove('active');
+      });
+    });
+  });
+
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('active');
+  }
+
+  
+</script>
+    </body>
+</html>

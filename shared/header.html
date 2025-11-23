@@ -1,0 +1,118 @@
+ <!-- Navbar -->
+<header
+  class="bg-white shadow-lg fixed top-10 left-0 right-0 z-40 transition-all duration-300"
+  id="mainNavbar">
+  <div
+    class="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-6 py-3 md:py-4">
+    <div class="flex items-center gap-3">
+      <a href="../index.html">
+        <div
+          class="w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden shadow-lg bg-white p-1">
+          <img src="./assets/Accs.jpeg" alt="Arab Cool Logo"
+            class="w-full h-full object-contain">
+        </div>
+        <div>
+          <h1
+            class="text-slate-900 text-sm md:text-lg font-bold tracking-tight">Arab
+            Cool Contracting</h1>
+          <p class="text-xs text-gray-600 hidden sm:block">Your
+            Trusted Partner in Qatar</p>
+        </a>
+      </div>
+    </div>
+
+    <nav class="hidden lg:flex gap-8 text-gray-700 font-medium">
+      <a href="../index.html"
+        class="hover:text-blue-600 transition">Home</a>
+      <a href="../services.html"
+        class="hover:text-blue-600 transition">Services</a>
+      <a href="../about.html"
+        class="hover:text-blue-600 transition">About</a>
+      <a href="../contact.html"
+        class="hover:text-blue-600 transition">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="tel:+97455449916"
+        class="hidden md:block bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white px-4 md:px-6 py-2 md:py-2.5 rounded-lg font-semibold transition shadow-lg hover:shadow-xl text-sm md:text-base">
+        Call Now
+      </a>
+      <button onclick="toggleMenu()"
+        class="lg:hidden text-slate-900 p-2 hover:bg-gray-100 rounded-lg transition">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu"
+    class="mobile-menu lg:hidden bg-white border-t">
+    <nav class="flex flex-col px-6 py-4 gap-4">
+      <a href="../index.html"
+        class="text-gray-700 hover:text-blue-600 transition py-2">Home</a>
+      <a href="../services.html"
+        class="text-gray-700 hover:text-blue-600 transition py-2">Services</a>
+      <a href="../about.html"
+        class="text-gray-700 hover:text-blue-600 transition py-2">About</a>
+      <a href="../contact.html"
+        class="text-blue-600 font-semibold py-2">Contact</a>
+      <a href="tel:+97455449916"
+        class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold text-center">Call
+        Now</a>
+    </nav>
+  </div>
+</header>
+
+
+  <script>
+      function load(){
+          async function loadHTML(id, file) {
+    const res = await fetch(file);
+    const html = await res.text();
+    document.getElementById(id).innerHTML = html;
+  }
+
+  loadHTML('header', './shared/header.html');
+  loadHTML('footer', './shared/footer.html');
+
+      }
+      load()
+
+  // Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+
+
+
+  document.addEventListener("DOMContentLoaded", function() {  
+    AOS.init({
+      duration: 800,   // Animation duration (ms)
+      easing: 'ease-out-cubic',
+      once: true,      // Animates only once per element
+      offset: 100      // Trigger offset from bottom of screen
+    });
+
+    // Mobile menu toggle
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobileMenu').classList.remove('active');
+      });
+    });
+  });
+
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('active');
+  }
+</script>
+
